@@ -20,12 +20,12 @@ Requires
   * six
 
 
-eNotas emissor REST and Search APIs
+eNotas emissor REST APIs
 ------------------------------
-Our [developer site](http://enotas.com.br) documents all the eNotas REST and Search APIs.
+ [developer site](http://enotas.com.br) eNotas REST APIs.
 
 
-Authentication
+auth
 -----
 
 eNotas API usa Basic auth
@@ -34,18 +34,12 @@ eNotas API usa Basic auth
 from enotas.client import ENotasEmissorAPI
 
 api = ENotasEmissorAPI(api_key = 'MDMwYWRkMTctNWYyYS00YzYyLTkzZDItOTQ5YTlkZjhlMjg3')
-recent_media, next_ = api.user_recent_media(user_id="userid", count=10)
-for media in recent_media:
-   print media.caption.text
 ```
        
-### Making unauthenticated requests
 
-For methods that don't require authentication, you can just pass your client ID and optionally client secret into the InstagramAPI 
-constructor:
 
 ``` python
-api_key = 'MD...g3'
+api_key = 'sua api key'
 api = ENotasEmissorAPI(api_key = api_key)
 vendas, proxima_pagina, total_vendas = api.vendas_by_filter(pageNumber = 0, pageSize = 50,
                                   filter = "(situacao eq 2 or situacao eq 3) and ((data ge getFirstDayOfLastMonth() and data le getLastDayOfLastMonth()))",orderBy = 'data desc')
