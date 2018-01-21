@@ -8,7 +8,7 @@ python-enotas-emissor
 ======
 API do eNotas emissor REST APIs para python 2/3 client
 
-Installation
+instalação
 -----
 ```
 pip install python-enotas-emissor
